@@ -1,0 +1,283 @@
+<html>
+    <head>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    </head>
+    <body onresize="quitarMenu()">
+        <!--Contenedor-->
+        <div id="contenedor">
+            <!--cabecera-->
+            <div id="cabecera">
+                   
+                <div id="fijo">
+                    <div class="topnav" id="myTopnav">
+                        
+                            <div id="logo">
+                                    <a href="index.html"><img src="img/insis2.png" id="imgLogo" height="100px" width="100px" >
+                                    <span>Instalaciones y Servicios industriales</span>
+                                    </a> 
+                                    <div class="clear"></div>
+                                </div> 
+                        <a href="#invisible">COMPANIA</a>
+                        <div class="dropdown" id="dropdownT">
+                            <button class="dropbtn"  id="dropTrab">TRABAJOS
+                                    <span id="trabajosMas" onclick="AbrirTrabajos()"  >   <i class="fa fas fa-plus"></i></span>
+                            </button>
+                            <div class="dropdown-content" id="dropdown-contentTrab">
+                            <a href="trabajos.html#anclaGas">Gases</a>
+                            <a href="trabajos.html#anclaElectro">Electroneumatica</a>
+                            <a href="trabajos.html#anclaProcesos">Control de procesos</a>
+                            </div>
+                        </div> 
+                        <div class="dropdown" id="dropdownN">
+                        <button class="dropbtn"  id="dropNov">NOVEDADES
+                                <span id="novedadesMas" onclick="AbrirNovedades()" >   <i class="fa fas fa-plus"></i></span>
+                        </button>
+                        <div class="dropdown-content" id="dropdown-contentNov">
+                           
+                            <a href="novedades.html#contenido">Calibracion de manometros</a>
+                            <a href="novedades.html#anclaBalanzas">Balanzas de alta precision</a>
+                        </div>
+                        </div> 
+                        <a href="#ancla2">CONTACTO</a>
+                        <a href="javascript:void(0);" style="font-size:40px;" class="icon" onclick="myFunction()">&#9776;</a>
+                        <div id="fondo"> </div>
+                    </div>
+            </div>
+              <script>
+                function AbrirTrabajos()
+                {
+                    x = document.getElementById("dropdown-contentTrab");
+                    x.className +=" Abrir";
+                    document.getElementById("dropTrab").innerHTML="TRABAJOS <span id='trabajosMas' onclick='CerrarTrabajos()'>   <i class='fa fas fa-minus'></i></span>";
+
+                }
+                function CerrarTrabajos()
+                {
+                    x = document.getElementById("dropdown-contentTrab");
+                    x.className ="dropdown-content";
+                    document.getElementById("dropTrab").innerHTML="TRABAJOS <span id='trabajosMas' onclick='AbrirTrabajos()'>   <i class='fa fas fa-plus'></i></span>";
+                }
+                function AbrirNovedades()
+                {
+                    x = document.getElementById("dropdown-contentNov");
+                    x.className +=" Abrir";
+                    document.getElementById("dropNov").innerHTML="NOVEDADES <span id='novedadesMas' onclick='CerrarNovedades()'>   <i class='fa fas fa-minus'></i></span>";
+                }
+                function CerrarNovedades()
+                {
+                    x = document.getElementById("dropdown-contentNov");
+                    x.className ="dropdown-content";
+                    document.getElementById("dropNov").innerHTML="NOVEDADES <span id='novedadesMas' onclick='AbrirNovedades()'>   <i class='fa fas fa-plus'></i></span>";
+                 
+                }
+                function myFunction() {
+                
+
+
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topnav") {
+                        x.className += " responsive";
+                        y = document.getElementById("dropdownN");
+                        y.className +=" dropdownNo";
+                        z = document.getElementById("dropdownT");
+                        z.className +=" dropdownNo";
+                     
+                        
+                                        
+                    }
+                     else {
+                        x.className = "topnav";
+                        y = document.getElementById("dropdownN");
+                        y.className ="dropdown";
+                        z = document.getElementById("dropdownT");
+                        z.className ="dropdown";
+                        CerrarNovedades();
+                        CerrarTrabajos();
+
+                        
+                    }
+                   
+                }    
+                  
+                
+                function quitarMenu()
+                {
+                    var x = document.getElementById("myTopnav");
+                    x.className = "topnav";
+                    y = document.getElementById("dropdownN");
+                        y.className ="dropdown";
+                    z = document.getElementById("dropdownT");
+                    z.className = "dropdown";
+                        CerrarNovedades();
+                        CerrarTrabajos();
+                }
+                </script>                
+                              
+                        
+              
+           
+            </div><!--cabecera-->
+          
+          
+
+            <!--Contenido-->
+            
+            <div id="contenido">
+                  
+                    <div id="c-slider">
+                        <div id="slider" class="slider">
+                                <section class="slider__section">
+                                    <div class="infoSection">
+                                        <h1 class="tituloSection">INSTALACION DE GASES INDUSTRIALES Y MEDICINALES</h1>
+                                        <p class="textoSection">
+                                          
+                                           
+                                            Los gases industriales son un grupo de gases manufacturados que 
+                                            se comercializan con usos en diversas aplicaciones. Principalmente 
+                                            son empleados en procesos industriales, tales como la
+                                             fabricación de acero, aplicaciones médicas, fertilizantes, semiconductores, etc.
+                                       
+                                       
+                                        </p>
+                                        <a href="trabajos.html#anclaGas" class="buttonSection">MAS INFORMACION </a>
+                                    </div>
+                                    <div class="textoResponsive">
+                                            <a href="trabajos.html#anclaGas" >Gases medicinales</a>
+                                    
+                                    </div>
+                                    <img src="img/industria.jpg" class="slider__img" height="510px"></section>
+                      
+                                <section class="slider__section">
+                                        <div class="infoSection">
+                                                <h1 class="tituloSection">ELECTRONEUMATICA</h1>
+                                                <p class="textoSection">
+                                                  
+                                                   
+                                                        En electroneumática, la energía eléctrica substituye a la energía neumática como 
+                                                        el elemento natural para la generación y transmisión de las señales de control 
+                                                        que se ubican en los sistemas de mando.
+                                               
+                                                </p>
+                                                <a href="trabajos.html#anclaElectro" class="buttonSection">MAS INFORMACION </a>
+                                            </div>
+                                            <div class="textoResponsive">
+                                                    <a href="trabajos.html#anclaElectro" >Electroneumatica</a>
+                                            
+                                            </div>
+                                    <img src="img/electroN.jpg" class="slider__img" height="510px" ></section>
+                                <section class="slider__section">
+                                        <div class="infoSection">
+                                                <h1 class="tituloSection" >CONTROL DE PROCESOS</h1>
+                                                <p class="textoSection">
+                                                  
+                                                   
+                                                        La instrumentación y control de procesos es una especialidad de la ingeniería que
+                                                        combina, a su vez, distintas ramas, entre las que destacan: sistemas de control,
+                                                         automatización, electrónica e informática. Su principal aplicación y propósito es
+                                                          el análisis, diseño y automatización de procesos de manufactura de la mayor parte 
+                                                          de las áreas industriales: petróleo y gas, generación de energía eléctrica, textil,
+                                                           alimentaria, automovilística, ...
+                                               
+                                                </p>
+                                                <a href="trabajos.html#anclaProcesos" class="buttonSection">MAS INFORMACION </a>
+                                        </div>
+                                        <div class="textoResponsive">
+                                                <a href="trabajos.html#anclaProcesos" >Control de procesos</a>
+                                        
+                                        </div>
+                                        
+                                    <img src="img/ControlP.jpg" class="slider__img" height="510px"></section>
+                                   
+                                <section class="slider__section">
+                                        <div class="textoResponsive">
+                                                <a href="#" >Que se yo</a>
+                                        
+                                        </div>
+                                    <img src="img/industria4.jpg" class="slider__img" height="510px">
+                                </section>
+                            
+                            <div id="btn-prev" class="btn-prev">&#60</div>
+                            <div id="btn-next" class="btn-next">&#62</div>
+                        </div>
+                    </div>
+                   
+                    <script  type="text/javascript" src="./js/mio.js"></script>
+                    <div id="lineaCorta" class="lineaCorta"></div>
+                    <div id="invisible" class="ancla2"></div>
+                    <div id="infoFila" >
+                        <div class="infoColumna">
+                           <div id="infoImagen1">
+                               
+                               
+                               <h1>NOSOTROS</h1>
+                               <img src="img/logoPrueba.jpg"    style="width:80%;border-radius:50%; height:auto;">
+                               <p> Insi es una empresa dedicada a brindar los mejores servicios e instalaciones industriales del mercado, que cuenta
+                                    con una experiencia de 10 años brindando soporte e instalaciones industriales a instituciones que van desde  hospitales , centros 
+                                    de salud, unidades sanitarias hasta madereras y sectores dedicados a la industria conocida como "Industria pesada" .</p>
+                            </div>
+                        </div>
+                        <div class="infoColumna">
+                            <div id="infoImagen2">
+                                    <h1>MISION</h1>
+                                    <img src="img/mision.jpg" width="80%"  style="border-radius:50%;">
+                                    <p>Brindamos orientacion a nuestros clientes sobre las mejoras optimas de rendimiento , interpretacion consensuada de requerimientos
+                                         y el posterior seguimiento de nuestros trabajos realizados brindando asi un servicio completo y abarcativo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ancla2" class="ancla"></div>
+                    <div id="contactenos" >
+                       <div id="colorFondo">
+                            <h1>Contacte con nosotros</h1>
+                            <span>Complete los campos y envienos un mensaje, nos contactaremos con usted.</span>
+                            <div class="filaContactenos">
+                                    <form name="myForm" action="action_page.php" method="post" onsubmit="return validacion()">
+                                <div class="columnaContactenos">
+                                    
+                                        <input type="text" id="nombre" placeholder="Nombre" name="nombre" required>
+                                        <input type="text" placeholder="Mail" name="mail" required>
+                                        <input type="text" placeholder="Empresa" name="empresa" required>
+                                        <input type="text" placeholder="Telefono"  name="telefono" required>
+                                  
+                                </div>
+                                <div class="columnaContactenos">
+                                    
+                                    <textarea placeholder="Mensaje..." rows="7" cols="45" required></textarea>
+                                </div>
+                               
+                                <input type="submit" value="Enviar" id="enviar">
+                            </form>
+                            </div>
+                     
+                        </div>     
+                    </div>
+         
+            </div> <!--Contenido-->
+
+            <!--pie-->
+            <div id="pie">
+                <div class="filaPie">
+                    <div class="columnaPie" id="columnaLogo">
+                            <div class="colLogo">
+                                <img src="img/insis2.png" width="15%" height="120px" id="logoPie">
+                                <span class="fraseLogo">Instalaciones y Servicios industriales.</span>
+                            </div>
+                    </div>
+                    <div class="columnaPie">
+                            <div class="contacto">
+                                        <h1>CONTACTO</h1>
+                                    <p><strong>Movil:</strong> 15-5555-5555</p>
+                                    <p><strong>Telefono ( Posadas ) :</strong> ( 3411 ) 25-555-55</p>
+                                    <p><strong>E-mail:</strong>  ronatelec@hotmail.com</p>
+                            </div>
+                    </div>
+                   
+                </div>
+            </div> <!--pie-->
+
+        </div> <!--Contenedor-->
+    </body>
+</html>

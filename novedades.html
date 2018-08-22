@@ -1,0 +1,205 @@
+<html>
+    <head>
+            <meta name="viewport" content="width = device-width, initial-scale=1.0">
+            <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+       
+    </head>
+    <body onresize="quitarMenu()">
+        <!--Contenedor-->
+        <div id="contenedor">
+            <!--cabecera-->
+            <div id="cabecera">
+                   
+               
+                                    
+                    <div id="fijo">
+                            <div class="topnav" id="myTopnav">
+                                
+                                    <div id="logo">
+                                            <a href="index.html"><img src="img/insis2.png" id="imgLogo" height="100px" width="100px" >
+                                            <span>Instalaciones y Servicios industriales</span>
+                                            </a> 
+                                            <div class="clear"></div>
+                                        </div> 
+                                <a href="#invisible">COMPANIA</a>
+                                <div class="dropdown" id="dropdownT">
+                                    <button class="dropbtn"  id="dropTrab">TRABAJOS
+                                            <span id="trabajosMas" onclick="AbrirTrabajos()"  >   <i class="fa fas fa-plus"></i></span>
+                                    </button>
+                                    <div class="dropdown-content" id="dropdown-contentTrab">
+                                    <a href="trabajos.html#anclaGas">Gases</a>
+                                    <a href="trabajos.html#anclaElectro">Electroneumatica</a>
+                                    <a href="trabajos.html#anclaProcesos">Control de procesos</a>
+                                    </div>
+                                </div> 
+                                <div class="dropdown" id="dropdownN">
+                                <button class="dropbtn"  id="dropNov">NOVEDADES
+                                        <span id="novedadesMas" onclick="AbrirNovedades()" >   <i class="fa fas fa-plus"></i></span>
+                                </button>
+                                <div class="dropdown-content" id="dropdown-contentNov">
+                                   
+                                    <a href="novedades.html#contenido">Calibracion de manometros</a>
+                                    <a href="novedades.html#anclaBalanzas">Balanzas de alta precision</a>
+                                </div>
+                                </div> 
+                                <a href="#ancla2">CONTACTO</a>
+                                <a href="javascript:void(0);" style="font-size:40px;" class="icon" onclick="myFunction()">&#9776;</a>
+                                <div id="fondo"> </div>
+                            </div>
+                    </div>
+                      <script>
+                        function AbrirTrabajos()
+                        {
+                            x = document.getElementById("dropdown-contentTrab");
+                            x.className +=" Abrir";
+                            document.getElementById("dropTrab").innerHTML="TRABAJOS <span id='trabajosMas' onclick='CerrarTrabajos()'>   <i class='fa fas fa-minus'></i></span>";
+        
+                        }
+                        function CerrarTrabajos()
+                        {
+                            x = document.getElementById("dropdown-contentTrab");
+                            x.className ="dropdown-content";
+                            document.getElementById("dropTrab").innerHTML="TRABAJOS <span id='trabajosMas' onclick='AbrirTrabajos()'>   <i class='fa fas fa-plus'></i></span>";
+                        }
+                        function AbrirNovedades()
+                        {
+                            x = document.getElementById("dropdown-contentNov");
+                            x.className +=" Abrir";
+                            document.getElementById("dropNov").innerHTML="NOVEDADES <span id='novedadesMas' onclick='CerrarNovedades()'>   <i class='fa fas fa-minus'></i></span>";
+                        }
+                        function CerrarNovedades()
+                        {
+                            x = document.getElementById("dropdown-contentNov");
+                            x.className ="dropdown-content";
+                            document.getElementById("dropNov").innerHTML="NOVEDADES <span id='novedadesMas' onclick='AbrirNovedades()'>   <i class='fa fas fa-plus'></i></span>";
+                         
+                        }
+                        function myFunction() {
+                        
+        
+        
+                            var x = document.getElementById("myTopnav");
+                            if (x.className === "topnav") {
+                                x.className += " responsive";
+                                y = document.getElementById("dropdownN");
+                                y.className +=" dropdownNo";
+                                z = document.getElementById("dropdownT");
+                                z.className +=" dropdownNo";
+                             
+                                
+                                                
+                            }
+                             else {
+                                x.className = "topnav";
+                                y = document.getElementById("dropdownN");
+                                y.className ="dropdown";
+                                z = document.getElementById("dropdownT");
+                                z.className ="dropdown";
+                                CerrarNovedades();
+                                CerrarTrabajos();
+        
+                                
+                            }
+                           
+                        }    
+                          
+                        
+                        function quitarMenu()
+                        {
+                            var x = document.getElementById("myTopnav");
+                            x.className = "topnav";
+                            y = document.getElementById("dropdownN");
+                                y.className ="dropdown";
+                            z = document.getElementById("dropdownT");
+                            z.className = "dropdown";
+                                CerrarNovedades();
+                                CerrarTrabajos();
+                        }
+                        </script>                
+                                      
+                                
+           
+            </div><!--cabecera-->
+          
+          
+
+            <!--Contenido-->
+            <div id="contenido">
+                <div class="resaltado">
+                    <h1 class="tituloSeccion">Calibracion de manometros</h1>
+                </div>
+              
+                <div id="infoManometros">
+                    <div class="fila">
+                        <div class="columna">
+                            <img src="img/manometros.jpg">
+                        </div>
+                        <div class="columna" >
+                            <h2>¿Que es un manometro?</h2>
+                            <p>
+                                    El manómetro (del gr. μανός, ligero y μέτρον, medida) es un instrumento de medición para la presión 
+                                    de fluidos contenidos en recipientes cerrados. Se distinguen dos tipos de manómetros, 
+                                    según se empleen para medir la presión: de líquidos o de gases.
+                            </p>
+                            <p>
+                                    El servicio de "Calibracion de manometros" en INSI ya es un hecho ,asi que no olvides solicitarlo si
+                                    lo necesitas en tu empresa, te estaremos brindando la mejor orientacion y atencion.
+                            </p>  
+                           
+                        </div>
+                    </div>
+                </div>
+         
+                <div id="anclaBalanzas" class="anclaBalanzas"></div>
+                <div class="resaltado" id="resaltado2">
+                        <h1 class="tituloSeccion">Balanzas de alta precision</h1>
+                </div> 
+                    <div id="infoManometros">
+                        <div class="fila">
+                            <div class="columna">
+                                <img src="img/balanzas.jpg">
+                            </div>
+                            <div class="columna" >
+                                <h2>Metrologia</h2>
+                                <p>
+                                        El manómetro (del gr. μανός, ligero y μέτρον, medida) es un instrumento de medición para la presión 
+                                        de fluidos contenidos en recipientes cerrados. Se distinguen dos tipos de manómetros, 
+                                        según se empleen para medir la presión: de líquidos o de gases.
+                                </p>
+                                <p>
+                                        El servicio de "Calibracion de manometros" en INSI ya es un hecho ,asi que no olvides solicitarlo si
+                                        lo necesitas en tu empresa, te estaremos brindando la mejor orientacion y atencion.
+                                </p>  
+                               
+                            </div>
+                        </div>
+                    </div>
+               
+            </div> <!--Contenido-->
+
+            <!--pie-->
+            <div id="pie">
+                <div class="filaPie">
+                    <div class="columnaPie" id="columnaLogo">
+                            <div class="colLogo">
+                                <img src="img/insis2.png" width="15%" height="120px" id="logoPie">
+                                <span class="fraseLogo">Instalaciones y Servicios industriales.</span>
+                            </div>
+                    </div>
+                    <div class="columnaPie">
+                            <div class="contacto">
+                                        <h1>CONTACTO</h1>
+                                    <p><strong>Movil:</strong> 15-5555-5555</p>
+                                    <p><strong>Telefono ( Posadas ) :</strong> ( 3411 ) 25-555-55</p>
+                                    <p><strong>E-mail:</strong>  ronatelec@hotmail.com</p>
+                            </div>
+                    </div>
+                </div>
+            </div> <!--pie-->
+
+        </div> <!--Contenedor-->
+    </body>
+</html>

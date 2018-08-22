@@ -1,0 +1,245 @@
+<html>
+    <head>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    </head>
+    <body onresize="quitarMenu()">
+        <!--Contenedor-->
+        <div id="contenedor">
+            <!--cabecera-->
+            <div id="cabecera">
+                    <div id="fijo">
+                            <div class="topnav" id="myTopnav">
+                                
+                                    <div id="logo">
+                                            <a href="index.html"><img src="img/insis2.png" id="imgLogo" height="100px" width="100px" >
+                                            <span>Instalaciones y Servicios industriales</span>
+                                            </a> 
+                                            <div class="clear"></div>
+                                        </div> 
+                                <a href="#invisible">COMPANIA</a>
+                                <div class="dropdown" id="dropdownT">
+                                    <button class="dropbtn"  id="dropTrab">TRABAJOS
+                                            <span id="trabajosMas" onclick="AbrirTrabajos()"  >   <i class="fa fas fa-plus"></i></span>
+                                    </button>
+                                    <div class="dropdown-content" id="dropdown-contentTrab">
+                                    <a href="trabajos.html#anclaGas">Gases</a>
+                                    <a href="trabajos.html#anclaElectro">Electroneumatica</a>
+                                    <a href="trabajos.html#anclaProcesos">Control de procesos</a>
+                                    </div>
+                                </div> 
+                                <div class="dropdown" id="dropdownN">
+                                <button class="dropbtn"  id="dropNov">NOVEDADES
+                                        <span id="novedadesMas" onclick="AbrirNovedades()" >   <i class="fa fas fa-plus"></i></span>
+                                </button>
+                                <div class="dropdown-content" id="dropdown-contentNov">
+                                   
+                                    <a href="novedades.html#contenido">Calibracion de manometros</a>
+                                    <a href="novedades.html#anclaBalanzas">Balanzas de alta precision</a>
+                                </div>
+                                </div> 
+                                <a href="#ancla2">CONTACTO</a>
+                                <a href="javascript:void(0);" style="font-size:40px;" class="icon" onclick="myFunction()">&#9776;</a>
+                                <div id="fondo"> </div>
+                            </div>
+                    </div>
+                      <script>
+                        function AbrirTrabajos()
+                        {
+                            x = document.getElementById("dropdown-contentTrab");
+                            x.className +=" Abrir";
+                            document.getElementById("dropTrab").innerHTML="TRABAJOS <span id='trabajosMas' onclick='CerrarTrabajos()'>   <i class='fa fas fa-minus'></i></span>";
+        
+                        }
+                        function CerrarTrabajos()
+                        {
+                            x = document.getElementById("dropdown-contentTrab");
+                            x.className ="dropdown-content";
+                            document.getElementById("dropTrab").innerHTML="TRABAJOS <span id='trabajosMas' onclick='AbrirTrabajos()'>   <i class='fa fas fa-plus'></i></span>";
+                        }
+                        function AbrirNovedades()
+                        {
+                            x = document.getElementById("dropdown-contentNov");
+                            x.className +=" Abrir";
+                            document.getElementById("dropNov").innerHTML="NOVEDADES <span id='novedadesMas' onclick='CerrarNovedades()'>   <i class='fa fas fa-minus'></i></span>";
+                        }
+                        function CerrarNovedades()
+                        {
+                            x = document.getElementById("dropdown-contentNov");
+                            x.className ="dropdown-content";
+                            document.getElementById("dropNov").innerHTML="NOVEDADES <span id='novedadesMas' onclick='AbrirNovedades()'>   <i class='fa fas fa-plus'></i></span>";
+                         
+                        }
+                        function myFunction() {
+                        
+        
+        
+                            var x = document.getElementById("myTopnav");
+                            if (x.className === "topnav") {
+                                x.className += " responsive";
+                                y = document.getElementById("dropdownN");
+                                y.className +=" dropdownNo";
+                                z= document.getElementById("dropdownT");
+                                z.className +=" dropdownNo";
+                             
+                                
+                                                
+                            }
+                             else {
+                                x.className = "topnav";
+                                y = document.getElementById("dropdownN");
+                                y.className ="dropdown";
+                                z = document.getElementById("dropdownT");
+                                z.className ="dropdown";
+                                CerrarNovedades();
+                                CerrarTrabajos();
+        
+                                
+                            }
+                           
+                        }    
+                          
+                        
+                        function quitarMenu()
+                        {
+                            var x = document.getElementById("myTopnav");
+                            x.className = "topnav";
+                            y = document.getElementById("dropdownN");
+                                y.className ="dropdown";
+                                z = document.getElementById("dropdownT");
+                    z.className = "dropdown";
+                                CerrarNovedades();
+                                CerrarTrabajos();
+                        }
+                        </script>                
+                                      
+                                
+                      
+                
+                
+            </div><!--cabecera-->
+          
+          
+
+            <!--contenido-->
+            <div id="contenido">
+                <div id="infoGeneral"> 
+                    <div class="filaGral">
+                        <div class="columnaGral">
+                            <span>TRABAJOS</span>
+                        </div>
+                         <div class="columnaGral">
+                                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+                                            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                                            deserunt mollit anim id est laborum."
+                                        </p>
+                        </div>
+                       
+                       
+                    </div>
+                </div>
+                <div id="anclaGas" class="anclaGases"></div>
+                <div id="gases">
+                   <span class="tituloImagen">Gases medicinales e industriales</span>
+               </div>
+               <div id="infoGases">
+                <div class="filaGral">
+                    <div class="columnaGral"> 
+                        <span>GASES MEDICINALES E INDUSTRIALES</span>
+                    </div>  
+                    <div class="columnaGral">
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+                                  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                                  deserunt mollit anim id est laborum."
+                            </p>
+                    </div>
+                </div>
+               </div>
+               <div id="anclaElectro" class="anclaElectro"></div>
+               <div id="electroNeumatica"><span class="tituloImagen">Electroneumatica</span>
+                </div>
+                <div id="infoElectron">
+                    <div class="filaGral">
+                        <div class="columnaGral">
+                            <span>ELECTRONEUMATICA</span>
+                        </div>
+                        <div class="columnaGral">
+                                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+                                      eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                                      deserunt mollit anim id est laborum."
+                                </p>
+                        </div>
+                    </div>
+                   </div>
+                   <div id="anclaProcesos" class="anclaProcesos">
+                   <div id="procesos"><span class="tituloImagen">Control de Procesos</span>
+                    </div>
+                    <div id="infoProcesos">
+                        <div class="filaGral">
+                            <div class="columnaGral">
+                                <span>CONTROL DE PROCESOS</span>
+                            </div>
+                            <div class="columnaGral">
+                                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                         dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+                                          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                                          deserunt mollit anim id est laborum."
+                                    </p>
+                            </div>
+                        </div>
+                       </div>
+                       <!--Boton que me lleva al principio del documento-->
+                       <button onclick="topFunction()" id="myBtn" title="Comienzo">Comienzo</button>
+                       <script>
+                            // When the user scrolls down 20px from the top of the document, show the button
+                            window.onscroll = function() {scrollFunction()};
+                            
+                            function scrollFunction() {
+                                if (document.body.scrollTop > 1100 || document.documentElement.scrollTop > 1100) {
+                                    document.getElementById("myBtn").style.display = "block";
+                                } else {
+                                    document.getElementById("myBtn").style.display = "none";
+                                }
+                            }
+                            
+                            // When the user clicks on the button, scroll to the top of the document
+                            function topFunction() {
+                                document.body.scrollTop = 0;
+                                document.documentElement.scrollTop = 0;
+                            }
+                            </script>
+            </div> <!--Contenido-->
+
+            <!--pie-->
+            <div id="pie">
+                <div class="filaPie">
+                    <div class="columnaPie" id="columnaLogo">
+                            <div class="colLogo">
+                                <img src="img/insis2.png" width="15%" height="120px" id="logoPie">
+                                <span class="fraseLogo">Instalaciones y Servicios industriales.</span>
+                            </div>
+                    </div>
+                    <div class="columnaPie">
+                            <div class="contacto">
+                                        <h1>CONTACTO</h1>
+                                    <p><strong>Movil:</strong> 15-5555-5555</p>
+                                    <p><strong>Telefono ( Posadas ) :</strong> ( 3411 ) 25-555-55</p>
+                                    <p><strong>E-mail:</strong>  ronatelec@hotmail.com</p>
+                            </div>
+                    </div>
+                   
+                </div>
+            </div> <!--pie-->
+
+        </div> <!--Contenedor-->
+    </body>
+</html>
